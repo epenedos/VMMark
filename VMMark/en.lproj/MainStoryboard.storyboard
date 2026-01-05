@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uV5-Xx-Fiy">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--ListOEM Complete View Controller-->
+        <scene sceneID="qyS-el-2Lq">
+            <objects>
+                <tableViewController id="2Gw-oy-Nh6" customClass="VMListOEMCompleteViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" id="vPq-MY-e0d">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" showsCancelButton="YES" id="Hfh-7R-VEa" userLabel="searchBar">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            <connections>
+                                <outlet property="delegate" destination="2Gw-oy-Nh6" id="81Y-Hb-Fiy"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="2" indentationWidth="0.0" reuseIdentifier="MyCellOEMComplete" rowHeight="65" id="Etp-6f-B4b" customClass="VMListOEMCompleteCell">
+                                <rect key="frame" x="0.0" y="66" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="64"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="list-item-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lgo-jl-hKd">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="322" type="user" id="c0N-Cf-wRQ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Machine Model" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOj-Qs-Du3">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="8DC-kY-Tbh"/>
+                                                <constraint firstAttribute="width" constant="290" id="Osb-d3-e96"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                            <color key="textColor" red="0.0" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Results" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgQ-CT-iNU">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="3Sf-m0-Nt0"/>
+                                                <constraint firstAttribute="width" constant="272" id="VWE-7e-99V"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Lgo-jl-hKd" firstAttribute="top" secondItem="Etp-6f-B4b" secondAttribute="top" type="default" id="1vI-JC-1Oa"/>
+                                    <constraint firstAttribute="trailing" secondItem="SOj-Qs-Du3" secondAttribute="trailing" constant="20" type="default" id="3i8-ae-GZT"/>
+                                    <constraint firstItem="SOj-Qs-Du3" firstAttribute="top" secondItem="Etp-6f-B4b" secondAttribute="top" constant="8" id="3mJ-IW-ahv"/>
+                                    <constraint firstItem="Lgo-jl-hKd" firstAttribute="centerY" secondItem="Etp-6f-B4b" secondAttribute="centerY" type="default" id="CoQ-UX-yzY"/>
+                                    <constraint firstItem="SOj-Qs-Du3" firstAttribute="leading" secondItem="NgQ-CT-iNU" secondAttribute="leading" type="default" id="H2y-cw-WJ9"/>
+                                    <constraint firstItem="NgQ-CT-iNU" firstAttribute="top" secondItem="Etp-6f-B4b" secondAttribute="top" constant="32" id="Pdg-an-INi"/>
+                                    <constraint firstItem="Lgo-jl-hKd" firstAttribute="leading" secondItem="Etp-6f-B4b" secondAttribute="leading" type="default" id="jHd-sg-vJV"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="brandModel" destination="SOj-Qs-Du3" id="IAy-p6-Odb"/>
+                                    <outlet property="brandResults" destination="NgQ-CT-iNU" id="NGL-ud-Be2"/>
+                                    <segue destination="vbY-s0-GAH" kind="push" identifier="listOEMDetailed" id="tYE-DU-a6W"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2Gw-oy-Nh6" id="IDA-0Y-tTX"/>
+                            <outlet property="delegate" destination="2Gw-oy-Nh6" id="tbK-rG-U7e"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1x3-ps-POp"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Hfh-7R-VEa" id="5iT-RQ-44N"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kb1-bn-Xty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="-1449"/>
+        </scene>
+        <!--ListOEM Details View Controller-->
+        <scene sceneID="cBT-eu-c7T">
+            <objects>
+                <tableViewController id="vbY-s0-GAH" customClass="VMListOEMDetailsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="vfj-wA-j95">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Benchmark" id="jaZ-Cv-yAr">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="AYk-NR-FrG" detailTextLabel="GSs-LV-XS6" style="IBUITableViewCellStyleValue1" id="z24-c3-oMM">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Results" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYk-NR-FrG">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSs-LV-XS6">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="QhW-Bs-Te5" detailTextLabel="gZL-oD-Q92" rowHeight="66" style="IBUITableViewCellStyleValue1" id="6va-f5-Lvm">
+                                        <rect key="frame" x="0.0" y="91" width="320" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="VMWare" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhW-Bs-Te5">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="44" translatesAutoresizingMaskIntoConstraints="NO" id="gZL-oD-Q92">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Hardware" id="qdA-Vz-JmN">
+                                <cells>
+                                    <tableViewCell contentMode="scaleAspectFit" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="qLg-iX-Ijv" detailTextLabel="c3s-FK-G8r" style="IBUITableViewCellStyleValue1" id="9eQ-XW-itj">
+                                        <rect key="frame" x="0.0" y="204" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Hosts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLg-iX-Ijv">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3s-FK-G8r">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleAspectFit" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="gPo-eN-9gN" detailTextLabel="gmf-rg-JCv" style="IBUITableViewCellStyleValue1" id="5Il-07-I6B">
+                                        <rect key="frame" x="0.0" y="249" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="CPU's" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPo-eN-9gN">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmf-rg-JCv">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleAspectFit" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="EJa-aj-ygw" detailTextLabel="RyM-KC-spz" style="IBUITableViewCellStyleValue1" id="4ZR-g2-Acv">
+                                        <rect key="frame" x="0.0" y="293" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Cores" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJa-aj-ygw">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyM-KC-spz">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleAspectFit" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="0mb-bl-Cnj" detailTextLabel="BcT-sV-680" style="IBUITableViewCellStyleValue1" id="2ZT-z8-X0i">
+                                        <rect key="frame" x="0.0" y="337" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Threads" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0mb-bl-Cnj">
+                                                    <rect key="frame" x="10" y="11" width="67" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BcT-sV-680">
+                                                    <rect key="frame" x="246" y="11" width="44" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleAspectFit" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="zUa-b9-XNC" detailTextLabel="6pN-Dz-HF9" style="IBUITableViewCellStyleValue1" id="Jw5-fK-enZ">
+                                        <rect key="frame" x="0.0" y="381" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Matched  Hosts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zUa-b9-XNC">
+                                                    <rect key="frame" x="10" y="11" width="126" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6pN-Dz-HF9">
+                                                    <rect key="frame" x="246" y="11" width="44" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleAspectFit" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Xle-1z-qHj" detailTextLabel="J2z-lj-nob" style="IBUITableViewCellStyleValue1" id="mZn-mY-CVX">
+                                        <rect key="frame" x="0.0" y="425" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Uniform Hosts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xle-1z-qHj">
+                                                    <rect key="frame" x="10" y="11" width="118" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J2z-lj-nob">
+                                                    <rect key="frame" x="246" y="11" width="44" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="VMMark" id="Dqo-kx-Ev9">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ycj-G7-YbD" detailTextLabel="STw-za-7f0" style="IBUITableViewCellStyleValue1" id="UDw-cL-Gan">
+                                        <rect key="frame" x="0.0" y="516" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Version" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycj-G7-YbD">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STw-za-7f0">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vgr-Mp-Nxz" detailTextLabel="uA1-RC-gIq" style="IBUITableViewCellStyleValue1" id="pvl-mT-OUc">
+                                        <rect key="frame" x="0.0" y="561" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgr-Mp-Nxz">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uA1-RC-gIq">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="vbY-s0-GAH" id="IDb-Iq-iaC"/>
+                            <outlet property="delegate" destination="vbY-s0-GAH" id="qbz-wE-nZR"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="UcY-Qc-bhH"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="brandResults" destination="GSs-LV-XS6" id="YCU-Gn-3b8"/>
+                        <outlet property="brandVMWare" destination="gZL-oD-Q92" id="6Ml-Ra-bOc"/>
+                        <outlet property="cores" destination="RyM-KC-spz" id="HNm-y9-gtA"/>
+                        <outlet property="cpus" destination="gmf-rg-JCv" id="MMi-KA-ng9"/>
+                        <outlet property="date" destination="uA1-RC-gIq" id="qhp-jf-LWr"/>
+                        <outlet property="hosts" destination="c3s-FK-G8r" id="VsQ-9d-sSd"/>
+                        <outlet property="matchedHosts" destination="6pN-Dz-HF9" id="I6T-Vf-FzL"/>
+                        <outlet property="threads" destination="BcT-sV-680" id="rxW-iT-WGb"/>
+                        <outlet property="uniformHosts" destination="J2z-lj-nob" id="u6d-vs-fMo"/>
+                        <outlet property="version" destination="STw-za-7f0" id="HBM-1N-69v"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6g3-ka-d9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629" y="-801"/>
+        </scene>
+        <!--Navigation Controller - FAQ's-->
+        <scene sceneID="r2b-h9-R1b">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="jGJ-zS-bcg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="FAQ's" image="112-group.png" id="yzb-uB-4U8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Cr-Ki-3ve">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8hb-mU-6ay" kind="relationship" relationship="rootViewController" id="5C6-sf-ZLF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xtz-lM-OKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-954" y="688"/>
+        </scene>
+        <!--Mark Help View Controller - VMmark FAQ-->
+        <scene sceneID="dmd-Mh-aip">
+            <objects>
+                <viewController id="8hb-mU-6ay" customClass="VMVMMarkHelpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N97-2i-HKK">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="loH-nu-bd3">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <attributedString key="attributedText">
+                                    <fragment content="What is a tile?">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="43.299999999999997">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="43.299999237060547"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="  ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="13" name="Helvetica"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="43.299999999999997">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="43.299999237060547"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">A tile is a collection of diverse workloads consisting of eight virtual machines all concurrently executing.  Each workload represents common application workloads found in today’s datacenters.  Included in a single tile are a mail server, Web 2.0 database and Web System, E-Commerce back-end database and front-end Web layer, as well as an idle machine.Each virtual machine in a tile is tuned to use only a fraction of the system's total resources.  As a tile, the aggregate of all workloads normally utilises less than the full capacity of modern servers.  Therefore, the complete saturation of a system's resources and accurate measurement of server performance with VMmark 2.x require the execution of multiple tiles simultaneously.  </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="43.299999999999997">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="43.299999237060547"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Who will use VMmark v2?">
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="43.299999999999997">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="43.299999237060547"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="43.299999999999997">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="43.299999237060547"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="43.299999999999997">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="43.299999237060547"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">VMmark 2.x was developed as a useful tool for hardware vendors, system integrators, and customers to evaluate the performance of their systems. Many customers will not run the benchmark themselves, but rather rely on published VMmark 2.x scores from their hardware vendors to make purchasing and configuration decisions for their virtualization infrastructure.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="What are the use cases for VMmark v2?">
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">The main use-case for VMmark 2.x is to compare the performance of different hardware platforms and configurations. Organizations implementing or evaluating virtualization platforms today will use VMmark 2.x for comparing performance and scalability of different virtualization platforms, making appropriate hardware choices and for measure platform performance on an ongoing basis.
+It is also important to note that VMmark 2.x is neither a capacity planning tool nor a sizing tool. It does not provide deployment guidelines for specific applications. Rather VMmark 2.x is meant to be representative of a general-purpose virtualization environment. The virtual machine configurations and the software stacks inside the virtual machines are fixed as part of the benchmark specification. Recommendations derived from VMmark 2.x results will capture many common cases; however, specialized scenarios will likely require individual measurement.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="What are the benefits of VMmark v2?">
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">With VMmark 2.x, organizations now have a robust and reliable benchmark that captures the key performance characteristics of virtual platforms; is representative of real world environments running multiple workloads; is hardware platform neutral and provides a methodical way to measure scalability so that the same benchmark can be used across different vendor platforms.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="11" name="Helvetica"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="How do I interpret a VMmark v2 score?">
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> 
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="11" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">VMmark 2.x aggregates the throughput metrics of all application and infrastructure workloads to create a single overall benchmark score that can be used to quickly compare different platform configurations. Every workload must also pass its minimum quality-of-service requirements for the benchmark result to be considered compliant.
+After a valid run, the metrics of the application workloads within each tile are computed and aggregated into a score for that tile. This aggregation is performed by first normalizing the different performance metrics (such as Actions/minute and operations/minute) with respect to a reference platform. Then a geometric mean of the normalized scores is computed as the final score for the tile. The resulting per-tile scores are then summed to create the application-workload portion of the final metric.
+The metrics for the infrastructure workloads are aggregated separately using the same mathematical technique of normalization with respect to a reference platform followed by the computation of the geometric mean. Unlike the application workloads, the infrastructure workloads are not scaled explicitly by the user. Consequently, the infrastructure workloads are complied as a single group and no multi-tile sums are required
+The final benchmark score is then computed as a weighted average of the application-workload component and the infrastructure-workload component. VMmark 2.x gives a weight of 80% to application-workload component and a weight of 20% to the infrastructure-workload component. These weights were chosen to reflect the relative contribution of infrastructure and application workloads to overall resource demands.
+A VMmark 2.x full disclosure report also includes the raw and normalized results for each underlying workload as well as complete details of the virtualization platform configuration. In some cases, studying the workload metrics along with the platform configuration can provide insight into system performance and scaling.
+For a more detailed description of the benchmark scoring methodology see the VMmark 2.x Benchmarking Guide.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="  ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="13" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="How do I compare VMmark 2.x scores across different virtualization platforms?">
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="A">
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="13" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> higher VMmark 2.x score implies that a virtualization platform is capable of sustaining greater throughput in a mixed workload consolidation environment, while experiencing data center operations in the background. A larger number of VMmark 2.x tiles used to generate the benchmark means that the platform supported more virtual machines, across the multiple hosts, during the benchmark run. Typically, a higher benchmark score requires a higher number of tiles.
+If two different virtualization platforms achieve similar VMmark 2.x scores with a different number of tiles, the score with the lower tile count is generally preferred. The higher tile count could be a sign that the underlying hardware resources were not properly balanced. Studying the individual workload metrics is suggested in these cases.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="18" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3Oh-l5-eY6" appends="YES" id="O32-3Y-s7y"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="loH-nu-bd3" firstAttribute="bottom" secondItem="N97-2i-HKK" secondAttribute="bottom" type="default" id="LGh-ib-QAm"/>
+                            <constraint firstItem="loH-nu-bd3" firstAttribute="leading" secondItem="N97-2i-HKK" secondAttribute="leading" type="default" id="MIu-bY-RVY"/>
+                            <constraint firstItem="loH-nu-bd3" firstAttribute="top" secondItem="N97-2i-HKK" secondAttribute="top" type="default" id="QHc-Ig-wuq"/>
+                            <constraint firstItem="loH-nu-bd3" firstAttribute="trailing" secondItem="N97-2i-HKK" secondAttribute="trailing" type="default" id="hFq-Ir-H2I"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="feO-Qr-Yo5"/>
+                    <navigationItem key="navigationItem" title="VMmark FAQ" id="Tx6-Pg-waN"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="help" destination="loH-nu-bd3" id="IF1-CM-QZ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uih-2d-xUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="3Oh-l5-eY6">
+                    <connections>
+                        <action selector="zoom:" destination="8hb-mU-6ay" id="sfQ-3v-h4i"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-352" y="662"/>
+        </scene>
+        <!--ListOEM View Controller - VM Bench-->
+        <scene sceneID="uSY-sk-fAu">
+            <objects>
+                <tableViewController id="rUS-DS-jew" customClass="VMListOEMViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="67" sectionHeaderHeight="22" sectionFooterHeight="22" id="qXK-kF-nDJ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="67" id="oyJ-n3-Mxc" customClass="VMListOEMCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="switch-on.png" translatesAutoresizingMaskIntoConstraints="NO" id="sgL-hb-ZzY">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="39" id="JF2-vZ-zN7"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFa-my-FEW" userLabel="brandName">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="159" id="8mK-Bp-rk4"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="NYl-mv-60F">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="56" id="sBn-Tf-yeO"/>
+                                                <constraint firstAttribute="width" constant="58" id="x1O-7h-lLh"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utG-L2-O2G">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="BFC-hi-LnG"/>
+                                                <constraint firstAttribute="width" constant="38" id="Iyh-cD-cM2"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="NYl-mv-60F" firstAttribute="top" secondItem="oyJ-n3-Mxc" secondAttribute="top" constant="5" id="0nV-jj-BQ6"/>
+                                    <constraint firstItem="sgL-hb-ZzY" firstAttribute="leading" secondItem="KFa-my-FEW" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="7dz-fe-teL"/>
+                                    <constraint firstItem="utG-L2-O2G" firstAttribute="top" secondItem="oyJ-n3-Mxc" secondAttribute="top" constant="21" id="HTt-bQ-eIJ"/>
+                                    <constraint firstItem="NYl-mv-60F" firstAttribute="centerY" secondItem="KFa-my-FEW" secondAttribute="centerY" type="default" id="LOt-Dd-O0b"/>
+                                    <constraint firstItem="KFa-my-FEW" firstAttribute="centerY" secondItem="sgL-hb-ZzY" secondAttribute="centerY" type="default" id="Lc1-Ug-y1n"/>
+                                    <constraint firstItem="NYl-mv-60F" firstAttribute="leading" secondItem="oyJ-n3-Mxc" secondAttribute="leading" constant="13" id="XYt-l8-67K"/>
+                                    <constraint firstItem="sgL-hb-ZzY" firstAttribute="top" secondItem="oyJ-n3-Mxc" secondAttribute="top" constant="20" type="default" id="Zx4-JW-tFy"/>
+                                    <constraint firstItem="sgL-hb-ZzY" firstAttribute="trailing" secondItem="utG-L2-O2G" secondAttribute="trailing" type="default" id="fcA-DK-aZf"/>
+                                    <constraint firstItem="KFa-my-FEW" firstAttribute="leading" secondItem="oyJ-n3-Mxc" secondAttribute="leading" constant="85" id="g1l-Us-dNT"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="brandLogo" destination="NYl-mv-60F" id="HLn-2n-vbq"/>
+                                    <outlet property="brandName" destination="KFa-my-FEW" id="eD5-x0-h8L"/>
+                                    <outlet property="brandNum" destination="utG-L2-O2G" id="Yky-YD-2VS"/>
+                                    <segue destination="2Gw-oy-Nh6" kind="push" identifier="listOEMComplete" id="1cH-1s-Fbs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rUS-DS-jew" id="WH7-KZ-yV3"/>
+                            <outlet property="delegate" destination="rUS-DS-jew" id="46S-Rn-nqZ"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="VM Bench" id="K9N-Mh-I5W"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RpU-kN-6wm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203" y="-1403"/>
+        </scene>
+        <!--Navigation Controller - ByOEM-->
+        <scene sceneID="PpF-lA-N4L">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="P0n-A1-qiH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ByOEM" image="177-building.png" id="zD5-Kl-yrJ"/>
+                    <navigationItem key="navigationItem" id="svA-74-OpN"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Pb-4S-teQ">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i4T-f4-esh">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="rUS-DS-jew" kind="relationship" relationship="rootViewController" id="Y8f-nC-9Eb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXA-3h-nzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-491" y="-1403"/>
+        </scene>
+        <!--List Pair View Controller - Matched Pair-->
+        <scene sceneID="WSb-YR-9IF">
+            <objects>
+                <tableViewController id="GZV-0o-n1I" customClass="VMListPairViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="67" sectionHeaderHeight="22" sectionFooterHeight="22" id="Rp8-VJ-3lP">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCellPair" rowHeight="67" id="YgW-RA-PUw" customClass="VMListPairCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="67"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="list-item-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="DaA-js-nh9"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKT-rD-qH6">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="54" id="kw0-gx-UDL"/>
+                                                <constraint firstAttribute="width" constant="54" id="upE-xr-oJj"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoh-8o-Onh">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="217" id="Nay-K4-FbA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voo-mh-L7v">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="XKT-rD-qH6" firstAttribute="centerY" secondItem="DaA-js-nh9" secondAttribute="centerY" type="default" id="59U-vt-QQX"/>
+                                    <constraint firstItem="XKT-rD-qH6" firstAttribute="leading" secondItem="YgW-RA-PUw" secondAttribute="leading" constant="9" id="5QU-Jz-HIz"/>
+                                    <constraint firstItem="voo-mh-L7v" firstAttribute="top" secondItem="Qoh-8o-Onh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7HT-a1-Ckz"/>
+                                    <constraint firstItem="Qoh-8o-Onh" firstAttribute="top" secondItem="YgW-RA-PUw" secondAttribute="top" constant="9" id="7ns-DZ-VyQ"/>
+                                    <constraint firstItem="DaA-js-nh9" firstAttribute="top" secondItem="YgW-RA-PUw" secondAttribute="top" type="default" id="9jR-yL-329"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qoh-8o-Onh" secondAttribute="trailing" constant="20" type="default" id="PGE-6u-xar"/>
+                                    <constraint firstItem="XKT-rD-qH6" firstAttribute="centerY" secondItem="YgW-RA-PUw" secondAttribute="centerY" type="default" id="gdW-3G-Pqm"/>
+                                    <constraint firstItem="voo-mh-L7v" firstAttribute="leading" secondItem="Qoh-8o-Onh" secondAttribute="leading" type="default" id="haR-nQ-unC"/>
+                                    <constraint firstItem="DaA-js-nh9" firstAttribute="leading" secondItem="YgW-RA-PUw" secondAttribute="leading" type="default" id="mTz-QT-6VR"/>
+                                    <constraint firstAttribute="trailing" secondItem="voo-mh-L7v" secondAttribute="trailing" constant="20" type="default" id="uxv-je-Ncq"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="brandLogo" destination="XKT-rD-qH6" id="OVE-0k-XaK"/>
+                                    <outlet property="brandModel" destination="Qoh-8o-Onh" id="4IJ-mP-JcK"/>
+                                    <outlet property="brandResult" destination="voo-mh-L7v" id="GBw-yb-DGG"/>
+                                    <segue destination="vbY-s0-GAH" kind="push" identifier="listOEMDetailed" id="UXp-3J-ghs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Matched Pair" id="2ri-qU-HR4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBO-nJ-u1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24" y="-180"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Gco-N7-q6m">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="uV5-Xx-Fiy" customClass="VMTabBarController" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Rrx-MB-yZX">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="P0n-A1-qiH" kind="relationship" relationship="viewControllers" id="7Ly-2j-mzb"/>
+                        <segue destination="l2n-bz-P3q" kind="relationship" relationship="viewControllers" id="QB1-vq-iEC"/>
+                        <segue destination="jGJ-zS-bcg" kind="relationship" relationship="viewControllers" id="eJ4-3A-U6x"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GPH-Ka-UqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1607" y="-943"/>
+        </scene>
+        <!--Navigation Controller - Matched Pair-->
+        <scene sceneID="4Ii-yE-Jsi">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="l2n-bz-P3q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Matched Pair" image="89-dumbell.png" id="vq7-6W-ZND"/>
+                    <navigationItem key="navigationItem" id="H5Q-a7-miB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3M5-H7-TUH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GZV-0o-n1I" kind="relationship" relationship="rootViewController" id="Nba-Yx-uho"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lh0-vU-h2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-589" y="-180"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="112-group.png" width="32" height="21"/>
+        <image name="177-building.png" width="14" height="24"/>
+        <image name="89-dumbell.png" width="28" height="10"/>
+        <image name="list-item-bg.png" width="320" height="67"/>
+        <image name="switch-on.png" width="74" height="32"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="VMListOEMCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMListOEMCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="brandLogo" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="brandName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="brandNum" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VMListOEMCompleteCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMListOEMCompleteCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="brandModel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="brandResults" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="brandVMware" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cores" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cpus" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dataMark" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hosts" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="threads" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="version" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VMListOEMCompleteViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMListOEMCompleteViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
+            </relationships>
+        </class>
+        <class className="VMListOEMDetailsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMListOEMDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toHelp:"/>
+                <relationship kind="outlet" name="brandResults" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="brandVMWare" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="callHelp" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="cores" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cpus" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="date" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hosts" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="matchedHosts" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="threads" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="uniformHosts" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="version" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VMListOEMViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMListOEMViewController.h"/>
+        </class>
+        <class className="VMListPairCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMListPairCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="brandLogo" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="brandModel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="brandResult" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VMListPairViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMListPairViewController.h"/>
+        </class>
+        <class className="VMTabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMTabBarController.h"/>
+        </class>
+        <class className="VMVMMarkHelpViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VMVMMarkHelpViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="zoom:" candidateClass="UIPinchGestureRecognizer"/>
+                <relationship kind="outlet" name="help" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="UXp-3J-ghs"/>
+    </inferredMetricsTieBreakers>
+</document>
