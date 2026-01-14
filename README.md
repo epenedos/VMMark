@@ -55,4 +55,6 @@ VMMark/
 
 ## License
 
-This project is archived for historical reference.
+This project is released as **free use software**. You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software without restriction.
+
+This software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability arising from the use of this software.
